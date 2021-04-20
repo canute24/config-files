@@ -1,0 +1,14 @@
+{
+    // Appearance
+    "theme": "Adaptive.sublime-theme",
+    "font_size": 10,
+    "rulers": [80, 120],
+    "show_full_path": true,
+    "draw_white_space": "all",
+
+    // Behaviour
+    "trim_automatic_white_space": true,
+    "trim_trailing_white_space_on_save": true,
+    "ignored_packages": ["Vintage"],
+    "update_check": false
+}
