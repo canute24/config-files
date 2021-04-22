@@ -1,2 +1,2 @@
-# sublime-config
+# config
 Config files
