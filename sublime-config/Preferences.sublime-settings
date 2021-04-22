@@ -5,9 +5,12 @@
     "rulers": [80, 120],
     "show_full_path": true,
     "draw_white_space": "all",
+	"fade_fold_buttons": false,
+    "highlight_modified_tabs": true,
 
     // Behaviour
     "trim_automatic_white_space": true,
+	"ensure_newline_at_eof_on_save": true,
     "trim_trailing_white_space_on_save": true,
     "ignored_packages": ["Vintage"],
     "update_check": false
