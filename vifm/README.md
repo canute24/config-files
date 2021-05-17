@@ -1,12 +1,13 @@
 # Vifm config
+#### Homepage: https://www.vifm.info
 
 - Runs in terminal
 - Dual panel
 - vim bindings
 - 1MB binary on Windows
+- Infinitely customizable
 
-### Scrrenshot: vifm on Windows 10
-#### It doesn't matter if you don't know the bindings at least you can look at it all day and be happy
+### Screenshot: Vifm on Windows 10 terminal
 ![](/vifm/awesome-vifm.png)
 "Look on my works ye mighty and despair." _-vifm_
-###### Copy theme from folder
+###### Theme is in folder. g80 theme with zenburn highlights
