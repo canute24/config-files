@@ -65,10 +65,14 @@ set norunexec
 " List of color schemes to try (picks the first one supported by the terminal)
 
 colorscheme g80-custom-zenburn-highlight
+" colo palenight
 " colorscheme Default-256 Default
 
-set sort=+fileext,-size
-filetype * start, explorer
+set sort=+fileext
+
+filetype {*.JPG,*.JPEG,*.JPE,*.GIF,*.BMP,*.DIB,*.TIF,*.TIFF,*.PNG,*.PCX,*.TGA,*.PCD,*.SUN,*.RAS,*.ICO,*.IFF,*.PPM,*.PGM,*.PBM,*.LBM,*.WMF,*.EMF,*.PSD,*.MPE,*.MPEG,*.MID,*.RMI,*.MOV,*.CUR,*.ANI,*.DCX,*.EPS,*.CLP,*.CAM,*.G3,*.AIF,*.AU,*.SND,*.PSP,*.PSPIMAGE,*.ICL,*.SFW,*.KDC,*.RA,*.DCM,*.ACR,*.FPX,*.XBM,*.XPM,*.DJVU,*.SWF,*.FLV,*.IMG,*.IW44,*.WBMP,*.SGI,*.RGB,*.RLE,*.MED,*.RLE,*.SFF,*.JP2,*.JPC,*.J2K,*.JPF,*.CRW,*.B3D,*.TTF,*.SID,*.MNG,*.JNG,*.RAW,*.ECW,*.ASF,*.WAD,*.ICS,*.IDS,*.CDR,*.CMX,*.NEF,*.NRW,*.ERF,*.ORF,*.RAF,*.MRW,*.DCR,*.X3F,*.SRF,*.ARW,*.PEF,*.RW2,*.RWL,*.SRW,*.MOS,*.3FR,*.DWG,*.DXF,*.DDS,*.JPM,*.PLT,*.CR2,*.DNG,*.PS,*.AI,*.CGM,*.SVG,*.DCM,*.HDR,*.FITS,*.HDP,*.WDP,*.JXR,*.EXR,*.WSQ,*.JLS,*.WBZ,*.WBC,*.M2T,*.MPO,*.PDN,*.XCF,*.WEBP,*.WEBM,*.HEIC,*.DPX,*.CIN,*.FLIF} {Open with iview} "C:\Users\canutes\Documents\Programs\iview\i_view64.exe" %"f &
+
+filetype * start, explorer %f &
 
 " file types
 set classify=' :dir:/, :exe:, :reg:, :link:'
