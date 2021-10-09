@@ -1,0 +1,10 @@
+{
+    "python" : {
+        "prog": "terminus",
+        "bracketed_paste_mode": true,
+        // paste clipboard to cmder/conemu and terminus assuming that
+        // local ipython is in use
+        // you'll need to turn this off if you are sending code to remote server
+        "paste_to_console": true
+    }
+}
