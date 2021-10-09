@@ -1,0 +1,150 @@
+1. Navigation
+1.1 Standard Navigation
+Ctrl+Arrow Left/Arrow Right			: Move one word left arrow/ right arrow
+Alt+Arrow Left/Arrow Right			: Move one sub-word left arrow/ right arrow
+Ctrl+Arrow Up/Arrow Down			: Scroll page up arrow/ down arrow without changing cursor position
+
+1.2 Fancy Navigation
+Ctrl+M			: Move to opening bracket of faction, repeat for closing bracket
+Ctrl+R			: Show Function List and navigate
+Ctrl+Shift+R	: Show Function List without changing cursor position
+Ctrl+;			: Go to word in current file
+Alt+-/+ (Keypad): Jump forward/ backwards to/ from previous positions or selections
+Ctrl+G			: Goto line
+Ctrl+KC			: Center screen to cursor
+
+2. Selections
+2.1 Standard Selections
+Shift+Arrow Left/Arrow Right		: Extend selection one character left arrow/ right arrow
+Ctrl+Shift+Arrow Left/Arrow Right	: Extend selection one word left arrow/ right arrow
+Alt+Shift+Arrow Left/Arrow Right	: Extend selection one sub-word left arrow/ right arrow
+Shift+Arrow Up/Arrow Down			: Extend selection one line up arrow/ down arrow
+Shift+Page Up/Page Down				: Extend selection one page up arrow/ down arrow
+Shift+Home/End						: Extend selection to beginning/ end of line
+Ctrl+Shift+Home/End					: Extend selection to beginning of file/ end of file
+
+2.2 Advanced Selections
+Ctrl+L			: Select Line,
+Ctrl+D			: Select current word, continue press D for expanding selection. Then continue in multi-line editing mode
+Alt+F3			: Select all occurrences of current word, then continue in multi-line editing mode
+Ctrl+Shift+L	: With multiple lines selected - enter multi-line editing mode.
+Esc				: Cancel Selection
+Ctrl+Shift+J	: Select lines in this indention
+Ctrl+Shift+A	: Expand Selection
+Ctrl+Shift+Space: Expand selection
+Ctrl+Shift+M	: Select current function enclosed by brackets or parentheses
+
+3. Cool Text Manipulation
+Ctrl+Shift+Arrow Up/Arrow down: Move line or selection up arrow/ down arrow
+Ctrl+Enter				: Insert line after and position cursor at beginning of new line
+Ctrl+Enter				: Insert line after and position cursor at beginning of new line
+Ctrl+J					: Join line below at end of current line
+Ctrl+Shift+Arrow Down	: Duplicate lines (on Sublime 3 on Windows this seem to no longer work, try Ctrl+Shift+D)
+Ctrl+T					: Transpose
+F9						: Sort Lines case sensitive
+Shift+F9				: Sort Lines case in-sensitive
+Ctrl+]/[				: Indent/ unindent
+Ctrl+Shift+D			: Duplicate line or selection
+Ctrl+/					: Toggle Comment line
+Ctrl+Shift+/			: Toggle Comment block
+Ctrl+ku					: Change selection to Uppercase
+Ctrl+KL					: Change selection to Lowercase
+Alt+Q					: Wrap lines to 80 characters and remove indent
+
+4. Deletions
+Ctrl+Backspace		: Delete word to the left
+Ctrl+Delete			: Delete word to the right
+Ctrl+Shift+Backspace: Delete from cursor to beginning of line
+Ctrl+Shift+Delete	: Delete from cursor to end of line
+
+5. Undo and Redo
+Ctrl+Z			: Undo
+Ctrl+Shift+Z	: Redo
+Ctrl+Y			: Redo or repeat
+Ctrl+U			: Soft Undo
+Ctrl+Shift+U	: Soft redo
+
+6. Cut, Copy and Paste
+Cut and Copy without selection takes complete line
+Shift+Delete	: Cut
+Ctrl+Insert		: Copy
+Shift+Insert	: Paste
+Ctrl+X			: Cut
+Ctrl+C			: Copy
+Ctrl+V			: Paste
+Ctrl+Shift+V	: Paste and match current indention
+Ctrl+KV			: Paste from History
+
+7. Find and Replace
+Ctrl+F			: Standard Find
+Ctrl+H			: Find and Replace
+Ctrl+Shift+F	: Find and Replace in open tabs/ files and folders
+Ctrl+Shift+H	: Replace next
+F3/Shift+F3		: Find next/ previous
+Ctrl+Shift+F	: Creates file with search results from all open files in new tab
+Ctrl+D			: Find and highlight current word in text
+Ctrl+F3			: Find under
+Ctrl+Shift+F3	: Find under previous
+Alt+F3			: Find all under
+Ctrl+E			: Slurp find string
+Ctrl+Shift+E	: Slurp replace string
+
+8. Menu Control
+Ctrl+Shift+N	: New Window
+Ctrl+Shift+W	: Close Window
+Ctrl+O			: Open File
+Ctrl+Shift+T	: Reopen last file
+Ctrl+N			: New file
+Ctrl+S			: Save file
+Ctrl+Shift+S			: Save file as
+Ctrl+F4			: Close File
+Ctrl+W			: Close Sublime
+
+9. Bookmarks and Marks
+Ctrl+F2			: Toggle Bookmark
+F2				: Go to next bookmark
+Shift+F2		: Go to previous bookmark
+Alt+F2			: Select all bookmarks
+Ctrl+KSpace		: Set Mark
+Ctrl+KA			: Select to mark
+Ctrl+KW			: Delete to mark
+Ctrl+KX			: Swap with mark
+Ctrl+KY			: Yank
+
+10. Manage Sublime Window, Files and Tabs
+Ctrl+KB					: Toggle sidebar
+Ctrl+Page Down/Page Up	: Move to next/ previous open tab
+Ctrl+Tab/Ctrl+Shift+Tab	: Move to next/ previous open tab by stack (order they were opened)
+Ctrl+Shift+T			: Reopen last closed tab
+Ctrl+/-					: Zoom - increase/ decrease font size
+Ctrl+P					: Quick Open - Show file list of currently opened file
+F11						: Toggle full screen
+Shift+F11				: Toggle full screen distraction free
+
+11. Split Panes
+Alt+Shift+1							: Split layout to 1 pane
+Alt+Shift+2							: Split layout to 2 vertical panes
+Alt+Shift+3							: Split layout to 3 vertical panes
+Alt+Shift+4							: Split layout to 4 vertical panes
+Alt+Shift+5							: Split layout to 2 vertical and 2 horizontal panes
+Alt+Shift+8							: Split layout to 2 horizontal panes
+Ctrl+2								: Focus/ cursor on split pane #2
+Ctrl+3								: Focus/ cursor on split pane #3
+Ctrl+4								: Focus/ cursor on split pane #4
+Ctrl+1								: Focus/ cursor on split pane #1
+Ctrl+Shift+1.…4						: New pane in pane #1 thru #4
+Ctrl+K, then Arrow Up (with Ctrl pressed)	: Open new pane, and move current window into new pane
+Ctrl+K, then Arrow Down				: Close current pane
+Ctrl+K, then left arrow/Arrow Right	: Move to next pane to the left arrow/ right arrow
+Ctrl+K, then Ctrl+Shift+Arrow Right/Arrow Left	: Open new tab in pane to the left arrow/ right arrow\
+Alt+1…0								: Jump to tab 1..10 in current pane
+
+12. Others
+Ctrl+Shift+[/]			: Fold/ unfold
+Ctrl+K, then Ctrl+1.…9	: Fold by level 1….9
+Ctrl+K, then Ctrl+J		: Unfold all
+F6						: Toggle spell checking
+Ctrl+F6					: Find next misspelling
+Ctrl+Shift+F6			: Find previous misspelling
+Ctrl+`					: Toggle Console
+Alt+V, then W			: Toggle word wrap - View - Word wrap
