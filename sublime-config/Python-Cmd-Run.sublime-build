@@ -1,0 +1,8 @@
+{
+    "cmd": ["start", "cmd", "/k", "C:\\Users\\canutes\\Documents\\Programs\\python392\\python.exe", "$file"],
+    "shell": true,
+    "selector": "source.python",
+    "file_regex": "^\\s*File \"(...*?)\", line ([0-9]*)",
+    "working_dir": "$file_path",
+    "env": {}
+}
