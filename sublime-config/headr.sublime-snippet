@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+#!python3.9
+
+# -*- coding: utf-8 -*-
+
+################################################
+#
+# Created: ${1:<timedate>}
+# @author: ${2:<username>}
+#
+################################################
+
+# To add a new cell, type '# %%'
+# To add a new markdown cell, type '# %% [markdown]'
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>headr</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
