@@ -1,17 +1,36 @@
 {
+	"color_scheme": "Mariana.sublime-color-scheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": false,
 	"fade_fold_buttons": false,
-	"font_face": "Cousine",
-	"font_options":	["dwrite_cleartype_natural"],
+	// "font_face": "Cousine",
+	// "font_face": "Fira Code",
+	"font_face": "JetBrains Mono Regular",
+	"font_options":
+	[
+		// "drirectwrite"
+		// "gdi"
+		// "dwrite_cleartype_classic"
+		// "dwrite_cleartype_natural"
+		"subpixel_antialias",
+	],
 	"font_size": 9,
 	"highlight_modified_tabs": true,
-	"ignored_packages":	["Vintage"],
-	"line_padding_bottom": 0,
-	"rulers": [79, 11],
+	"caret_style": "phase",
+	"ignored_packages":
+	[
+		// "Vintage"
+	],
+	"line_padding_bottom": -1,
+	"rulers":
+	[
+		80,
+		120
+	],
 	"show_full_path": true,
 	"theme": "Adaptive.sublime-theme",
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
-	"update_check": false
+	"update_check": false,
 }
