@@ -1,3 +1,11 @@
 [
-	{ "keys": ["f5"], "command": "insert_datetime"}
+    { "keys": ["f5"], "command": "insert_datetime"},
+    {
+        "keys": ["ctrl+enter"], "command": "display_diagrams",
+        "context": [
+            {
+                "key": "selector", "operator": "equal", "operand": "source.wsd"
+            }
+        ]
+    }
 ]
