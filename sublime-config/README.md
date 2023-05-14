@@ -5,3 +5,6 @@
 * Terminus
 * SendCode
 * Bracker Highlighter
+* PlantUmlDiagrams
+* Github Theme
+* Vintage
