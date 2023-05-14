@@ -1,0 +1,6 @@
+{
+    "viewer" : "WindowsDefaultViewer",
+    "output_format": "svg",
+    "plantuml_server": "http://localhost:8080/plantuml/",
+    "jar_file": "C:/Users/canutes/Documents/Programs/plantuml/plantuml.jar",
+}
