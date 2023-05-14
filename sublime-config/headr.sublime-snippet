@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-#!python3.9
+#!python3.10
 
 # -*- coding: utf-8 -*-
 
@@ -18,5 +18,5 @@
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>headr</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
+	<scope>source.python</scope>
 </snippet>
