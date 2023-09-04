@@ -1,0 +1,213 @@
+# my ms-win command prompt colors
+# 00 normal
+# 01 bold
+# 04 underline
+# 05 blink
+# --- std colours
+# 30 black
+# 31 red
+# 32 green (dark)
+# 33 yellow
+# 34 blue (dark)
+# 35 magenta
+# 36 cyan (light blue)
+# 37 light gray
+# --- bright colours
+# 90 gray
+# 91 pink
+# 92 green
+# 93 light yellow
+# 94 light blue
+# 95 light magenta
+# 96 light cyan
+# 97 white
+
+# vim:ft=dircolors
+# (This is not a dircolors file but it helps to highlight colors and comments)
+
+# default values from dircolors
+# (entries with a leading # are not implemented in lf)
+# #no     00              # NORMAL
+# fi      00              # FILE
+# #rs     0               # RESET
+# di      01;34           # DIR
+# ln      01;36           # LINK
+# #mh     00              # MULTIHARDLINK
+# pi      40;33           # FIFO
+# so      01;35           # SOCK
+# #do     01;35           # DOOR
+# bd      40;33;01        # BLK
+# cd      40;33;01        # CHR
+# or      40;31;01        # ORPHAN
+# #mi     00              # MISSING
+# su      37;41           # SETUID
+# sg      30;43           # SETGID
+# #ca     30;41           # CAPABILITY
+# tw      30;42           # STICKY_OTHER_WRITABLE
+# ow      34;42           # OTHER_WRITABLE
+# st      37;44           # STICKY
+# ex      01;32           # EXEC
+
+# default values from lf (with matching order)
+# ln      01;36   # LINK
+# or      31;01   # ORPHAN
+# tw      01;34   # STICKY_OTHER_WRITABLE
+# ow      01;34   # OTHER_WRITABLE
+# st      01;34   # STICKY
+# di      01;34   # DIR
+# pi      33      # FIFO
+# so      01;35   # SOCK
+# bd      33;01   # BLK
+# cd      33;01   # CHR
+# su      01;32   # SETUID
+# sg      01;32   # SETGID
+# ex      01;32   # EXEC
+# fi      00      # FILE
+
+# archives or compressed (dircolors defaults)
+*.tar   90
+*.tgz   90
+*.arc   90
+*.arj   90
+*.taz   90
+*.lha   90
+*.lz4   90
+*.lzh   90
+*.lzma  90
+*.tlz   90
+*.txz   90
+*.tzo   90
+*.t7z   90
+*.zip   90
+*.z     90
+*.dz    90
+*.gz    90
+*.lrz   90
+*.lz    90
+*.lzo   90
+*.xz    90
+*.zst   90
+*.tzst  90
+*.bz2   90
+*.bz    90
+*.tbz   90
+*.tbz2  90
+*.tz    90
+*.deb   90
+*.rpm   90
+*.jar   90
+*.war   90
+*.ear   90
+*.sar   90
+*.rar   90
+*.alz   90
+*.ace   90
+*.zoo   90
+*.cpio  90
+*.7z    90
+*.rz    90
+*.cab   90
+*.wim   90
+*.swm   90
+*.dwm   90
+*.esd   90
+
+# image formats (dircolors defaults)
+*.jpg   93
+*.jpeg  93
+*.mjpg  93
+*.mjpeg 93
+*.gif   93
+*.bmp   93
+*.pbm   93
+*.pgm   93
+*.ppm   93
+*.tga   93
+*.xbm   93
+*.xpm   93
+*.tif   93
+*.tiff  93
+*.png   93
+*.svg   93
+*.svgz  93
+*.mng   93
+*.pcx   93
+*.mov   93
+*.mpg   93
+*.mpeg  93
+*.m2v   93
+*.mkv   93
+*.webm  93
+*.ogm   93
+*.mp4   93
+*.m4v   93
+*.mp4v  93
+*.vob   93
+*.qt    93
+*.nuv   93
+*.wmv   93
+*.asf   93
+*.rm    93
+*.rmvb  93
+*.flc   93
+*.avi   93
+*.fli   93
+*.flv   93
+*.gl    93
+*.dl    93
+*.xcf   93
+*.xwd   93
+*.yuv   93
+*.cgm   93
+*.emf   93
+*.ogv   93
+*.ogx   93
+
+# audio formats (dircolors defaults)
+*.aac   93
+*.au    93
+*.flac  93
+*.m4a   93
+*.mid   93
+*.midi  93
+*.mka   93
+*.mp3   93
+*.mpc   93
+*.ogg   93
+*.ra    93
+*.wav   93
+*.oga   93
+*.opus  93
+*.spx   93
+*.xspf  93
+
+# custom colors
+ow 94
+di 96
+fi 37
+
+# executables and scripts
+*.lnk   91
+*.exe   91
+*.com   91
+*.cmd   91
+*.bat   91
+*.reg   91
+*.ps1   91
+*.vbs   91
+*.vb    91
+*.py    91
+*.pyc   91
+*.js    91
+*.jar   91
+
+# flat files
+*.txt   92
+*.md    92
+*.ini   92
+*.cfg   92
+*.json  92
+*.yaml  92
+*.toml  92
+*.log   92
+*.sql   92
