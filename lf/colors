@@ -189,17 +189,25 @@ fi 37
 # executables and scripts
 *.lnk   91
 *.exe   91
+*.msi   91
 *.com   91
 *.cmd   91
 *.bat   91
 *.reg   91
 *.ps1   91
-*.vbs   91
+*.psm1  91
+*.wsh   91
 *.vb    91
+*.vbs   91
+*.vbe   91
 *.py    91
 *.pyc   91
 *.js    91
+*.jse   91
 *.jar   91
+*.wsf   91
+*.scr   91
+*.sct   91
 
 # flat files
 *.txt   92
