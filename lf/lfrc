@@ -1,9 +1,5 @@
-# lfrc for windows uses %ENV_VAR% whereas for POSIX $ENV_VAR hence is not compatible
-
-# --- TODO --- #
-# set dupfilefmt '%b_v%n%e' # not working maybe because of old build
-# set statfmt '\033[36m%p\033[0m| %c| %u| %g| -> %l'
-# set ruler 'acc:progress:selection:filter:ind'
+# lfrc for windows uses %ENV_VAR% whereas for POSIX $ENV_VAR modify appropriately
+# shell prefixes and cmds read full line. Do NOT append comments # is ignored.
 
 # --- settings --- #
 # Shell commands with multiline definitions and/or positional arguments and/or
@@ -11,29 +7,31 @@
 # it is recommended to create separate script files and simply call them here
 # in commands or mappings.
 
-# set shell cmd		# interpreter for shell commands
-
 set number
 set relativenumber
-set ratios 1:3
-set info size:time
+set ratios 2:5
+set info size:ctime
 set sortby time
+set nodirfirst
+# set drawbox
+# set roundbox
+# set mouse			# send mouse event
+# set shell cmd		# interpreter for shell commands
+# set autoquit		# automatically quit server when there are no clients left connected
 set reverse			# using `sortby` criteria sort in reverse
 set nopreview		# hide preview pane same as `preview false`
 set hidden			# show hidden files
 set ignorecase		# ignore case on search
 set smartcase		# when search string contains capital don't ignore case
 set icons			# show icons
-set autoquit		# automatically quit server when there are no clients left connected
 set scrolloff 10	# leave some space at the top and the bottom of the screen
 set noanchorfind	# find anywhere in name
 set findlen 3		# search till exact match found
 set incsearch		# incremental search
 set incfilter		# apply filter pattern after each keystroke during filtering
 set filesep " "		# file name separator for fx and fs variables
-# set mouse true		# send mouse event
-
-# --- cmap (cmd binds) --- #
+set dupfilefmt '%b_v%n%e'
+set rulerfmt "  %P|  %a|  %p|  \033[7;31m %m \033[0m|  \033[7;33m %c \033[0m|  \033[7;35m %s \033[0m|  \033[7;36m %v \033[0m|  \033[7;34m %f \033[0m|  %i/%t"
 
 # --- map (keybinds) --- #
 # change the editor used in default editor keybinding
@@ -42,54 +40,121 @@ set filesep " "		# file name separator for fx and fs variables
 # instead install a terminal editor of your choice and replace the default
 # editor keybinding accordingly
 
-# map w $%shell% # change the shell used in default shell keybinding
-# map i !%PAGER% %f%
-map <esc> :unselect; clear; setfilter
-map R source ~/AppData/Local/lf/lfrc
-map J :updir; set dironly true; down; set dironly false; open
-map K :updir; set dironly true; up; set dironly false; open
-map . :read; cmd-history-prev; cmd-enter # repeat previous command
-map o &C:\Users\canutes\Documents\Programs\vifm\opener.bat %f%
+# favourites
+map gs cd ~/AppData
+map gk cd ~/Desktop
+map go cd ~/Documents
+map gb cd ~/Documents/Programs/bin
+map gf cd ~/Documents/Programs/ffmpeg
+map ga cd "~/Desktop/OneDrive - crisil.com/Documents/Engagements"
+map gp cd "~/Desktop/OneDrive - crisil.com/Documents/Personal/Apps"
+map ga cd "~/Desktop/OneDrive - crisil.com/Documents/Advanced Risk Analytics"
+map gz cd "\\MUMCHFNP01\Research\New Business Initiatives\Advanced Risk Analytics"
+map gk cd "\\MUMCHFNP01\Research\New Business Initiatives\Quantitative_Analytics\Ankit_Dhawan\Backup_Lite\RiskAssessmentDashboard\Backup"
 
-# copy options
+# file manager actions
+map <esc> :unselect; clear; setfilter
+map <f-5> reload
+map <delete> &powershell C:\Users\canutes\Documents\Programs\vifm\deletef.ps1 %fx%
+map .. :read; cmd-history-prev; cmd-enter # repeat previous command double dot for safety
+# Default: map e $%EDITOR% %f%
+map e &C:\Users\canutes\Documents\Programs\sublime\sublime_text.exe %f%
+map W &alacritty.exe --title "Command Prompt" --working-directory %PWD%
+map R source ~/AppData/Local/lf/lfrc
+# map <enter> shell # for shell in status line
+
+# opening
+map O &explorer %PWD%
+map oo &C:\Users\canutes\Documents\Programs\bin\opener.cmd %f%
+map of &ffplay -hide_banner %f%
+map oi &C:\Users\canutes\Documents\Programs\iview\i_view64.exe %f%
+map oz &C:\Program Files\7-Zip\7zFM.exe %f%
+
+# info
+map i # Default: map i !%PAGER% %f%
+map iz !7z.exe l -bt %f%
+map if !ffprobe -hide_banner %f%
+map im !echo ========== && more %f%
+map it !tree %f%
+map ii !dir /og-s %f%
+
+# modification
+map ar &attrib -r %f%
+map au !7z x -bb3 -bt %f%
+map av !7z x -bb3 -bt %f% -oNewFolder
+map az !7z a -bb3 -bt -ssp -t7z -mx9 -myx9 -mtc+ -saa %f% %f%
+
+# copy
 map y # unmap y
-map yp %echo %PWD% | clip
-map yf %echo %f% | clip
+map yp &echo %PWD% | clip
+map yn &cpfname.cmd %f% | clip
+map yf &echo %fx% | clip
 map yy copy
 
-# listing options
-map za set sortby atime
-map zc set sortby ctime
-map ze set sortby ext
+# display
 map zf filter
-map zn set sortby natural
-map zs set sortby size
-map zt set sortby time
+map zd set dirfirst!
 
-# change file rename behaviour
-# map r # unmap the default rename keybinding
-# map i rename
-# map I :rename; cmd-home
-# map A :rename; cmd-end
-# map c :rename; cmd-delete-home
-# map C :rename; cmd-end; cmd-delete-home
-
-# --- custom commands --- # DO NOT APPEND COMMENTS TO CMD
-# change 'doc' command to use a different pager
-# cmd doc $lf -doc | %PAGER%
+# navigation
+map J :updir; set dironly true; down; set dironly false; open
+map K :updir; set dironly true; up; set dironly false; open
 
 # search mode navigation
-# map <enter> :cmd-enter; open; search
-# cmd searchmode search; read; cmd-enter; search
+map <enter> search
+# cmap <enter> :cmd-enter; open; search # cant hit enter on any cmd will run selected item
 
-# open replacement options
-# map o &C:\Users\canutes\Documents\Programs\sublime\subl.exe %fx%
+# rename
+# map r # unmap the default rename keybinding
+# map rr rename
+# map rI :rename; cmd-home
+# map rA :rename; cmd-end
+# map rc :rename; cmd-delete-home
+# map rC :rename; cmd-end; cmd-delete-home
 
-# set attr=%~a1%
-# if %attr:~0,1%==d (
-# 	%OPENER% %1
-# ) else (
-# 	start C:\Users\canutes\Documents\Programs\sublime\sublime_text.exe %1
+# --- cmap (cmd binds) --- #
+
+# --- custom commands --- # 'CMD' READS COMMENTS. DO NOT APPEND, USE NEWLINE.
+# change 'doc' command to use a different pager (Optional)
+# cmd doc $lf -doc | %PAGER%
+cmd jumps !lf -remote "query %id% jumps"
+
+# --- supporting files --- #
+# opener.cmd>>>
+# set "attr=%~a1"
+#
+# if "%attr:~0,1%" == "d" (
+# 	explorer.exe %1
+# 	GOTO :EOF
 # )
+#
+# For %%G In (mkv opus ogg mp4 mp3) Do (
+# 	If /I "%~x1" == ".%%G" (
+# 		START C:\Users\canutes\Documents\Programs\ffmpeg\bin\ffplay.exe -hide_banner %1
+# 		GOTO :EOF
+# 	)
+# )
+#
+# For %%G In (7z zip rar cab docx xlsx pptx exe) Do (
+# 	If /I "%~x1" == ".%%G" (
+# 		START /WAIT "" 7z.exe l -bt %1
+# 		GOTO :EOF
+# 	)
+# )
+#
+# For %%G In (jpg png webp gif) Do (
+# 	If /I "%~x1" == ".%%G" (
+# 		START C:\Users\canutes\Documents\Programs\iview\i_view64.exe %1
+# 		GOTO :EOF
+# 	)
+# )
+#
+# START C:\Users\canutes\Documents\Programs\sublime\sublime_text.exe %1
 
-# cmd :clearall unselect; clear; setfilter
+# deletef.ps1>>>
+# $sh = new-object -comobject "Shell.Application"
+# for ( $i = 0; $i -lt $args.count; $i++ ) {
+# 	write-host "Recycling $i) $($args[$i])"
+# 	$sh.Namespace(0).ParseName($($args[$i])).InvokeVerb("delete")
+# }
+
+# cpfname.cmd >>> @echo %~nx1
